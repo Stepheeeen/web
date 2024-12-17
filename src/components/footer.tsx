@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
 import LogoLight from "../../public/flair-tech-light.png";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
@@ -47,8 +46,8 @@ const Footer = () => {
               Partner with Us
             </h2>
             <p className="text-base md:text-xl mb-6 max-w-2xl text-black/70 fira">
-              Ready to make an impact? Whether you're looking to grow your
-              business or join an innovative team, we're here to help.
+              Ready to make an impact? Whether you&apos;re looking to grow your
+              business or join an innovative team, we&apos;re here to help.
             </p>
           </div>
 
@@ -84,8 +83,8 @@ const Footer = () => {
               Join Our Team
             </h2>
             <p className="text-base md:text-xl mb-6 max-w-2xl text-black/70 fira">
-              We're always on the lookout for talented, creative individuals to
-              help shape the future with us. Join the team and let's build
+              We&apos;re always on the lookout for talented, creative individuals to
+              help shape the future with us. Join the team and let&apos;s build
               something amazing together!
             </p>
           </div>

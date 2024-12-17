@@ -116,7 +116,7 @@ const TeamPage = () => {
         >
           Our diverse team of experts brings together innovative thinking, deep
           technical expertise, and a passion for solving complex challenges.
-          We're united by our commitment to pushing the boundaries of technology
+          We&apos;re united by our commitment to pushing the boundaries of technology
           and creating meaningful impact.
         </motion.p>
 

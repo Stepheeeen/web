@@ -1,6 +1,12 @@
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 
-const AbstractFuturisticButton = ({ children, onClick }: any) => {
+const AbstractFuturisticButton = ({
+  children,
+  onClick,
+}: {
+  children: ReactNode;
+  onClick: () => void;
+}) => {
   const [isInteracting, setIsInteracting] = useState(false);
 
   return (
@@ -124,7 +130,13 @@ const AbstractFuturisticButton = ({ children, onClick }: any) => {
   );
 };
 
-const ButtonDemo = ({ handleClick, text }: any) => {
+const ButtonDemo = ({
+  handleClick,
+  text,
+}: {
+  handleClick: () => void;
+  text: string;
+}) => {
   return (
     <AbstractFuturisticButton onClick={handleClick}>
       {text}

@@ -109,9 +109,9 @@ const index = () => {
               variants={itemVariants}
               className="ext-xl md:text-2xl text-violet-900/80 max-w-3xl mx-auto mb-12 leading-relaxed fira"
             >
-              We're passionate architects of transformation, bridging visionary
+              We&apos;re passionate architects of transformation, bridging visionary
               ideas with cutting-edge execution. Our mission is to craft
-              innovative solutions that don't just change industries—they
+              innovative solutions that don&apos;t just change industries—they
               redefine possibilities.
             </motion.p>
           </div>
@@ -149,7 +149,7 @@ const index = () => {
                 ),
                 title: "Bold Creativity",
                 description:
-                  "Challenging norms, breaking boundaries, and designing what's next.",
+                  "Challenging norms, breaking boundaries, and designing what&apos;s next.",
               },
               {
                 icon: (
@@ -170,7 +170,7 @@ const index = () => {
                 ),
                 title: "Future-Forward Thinking",
                 description:
-                  "We embrace technology that anticipates tomorrow's needs, today.",
+                  "We embrace technology that anticipates tomorrow&apos;s needs, today.",
               },
               {
                 icon: (
@@ -270,7 +270,7 @@ const index = () => {
                   ),
                   title: "Futuristic Web Solutions",
                   description:
-                    "Web solutions designed to grow with your business and meet tomorrow's demands.",
+                    "Web solutions designed to grow with your business and meet tomorrow&apos;s demands.",
                 },
               ].map((solution, index) => (
                 <motion.div

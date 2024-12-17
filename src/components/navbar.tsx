@@ -1,34 +1,15 @@
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Logo from "../../public/flair-tech.png";
 import LogoLight from "../../public/flair-tech-light.png";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const Navbar = ({ styling, theme }: any) => {
-  const [activeSection, setActiveSection] = useState<string>("");
+const Navbar = ({ styling, theme }: { styling: string; theme: string }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [LogoTheme, setLogoTheme] = useState(theme);
   const pathname = usePathname();
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll("section");
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        if (
-          rect.top <= window.innerHeight / 2 &&
-          rect.bottom >= window.innerHeight / 2
-        ) {
-          setActiveSection(section.id);
-        }
-      });
-    };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Call once to set the initial state
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
   // Function to toggle the sidebar
   const toggleSidebar = () => {
     setIsOpen((prev) => !prev);

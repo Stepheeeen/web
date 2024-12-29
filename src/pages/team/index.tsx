@@ -8,7 +8,7 @@ const TeamPage = () => {
   const teamMembers = [
     {
       id: 1,
-      name: "Elena Rodriguez",
+      name: "Isaac Bright",
       role: "Chief Executive Officer",
       bio: "Visionary leader with 15+ years of technology strategy experience.",
       image: "", //require("../../../public/team-elena.jpg")
@@ -17,16 +17,16 @@ const TeamPage = () => {
     },
     {
       id: 2,
-      name: "Marcus Chen",
+      name: "Stephen Onucheyo",
       role: "Chief Technology Officer",
-      bio: "Expert in AI and cloud computing with multiple patent innovations.",
+      bio: "Experience in multiple technologies with multiple patent innovations.",
       image: "", //require("../../../public/team-marcus.jpg")
       linkedin: "#",
       twitter: "#",
     },
     {
       id: 3,
-      name: "Aisha Patel",
+      name: "Utee Akaninyene",
       role: "Head of Product Design",
       bio: "Design thinking expert transforming complex ideas into elegant solutions.",
       image: "", //require("../../../public/team-aisha.jpg")
@@ -35,7 +35,7 @@ const TeamPage = () => {
     },
     {
       id: 4,
-      name: "David Kim",
+      name: "Favour Aroniyo",
       role: "Lead Software Architect",
       bio: "Full-stack innovator specializing in scalable enterprise solutions.",
       image: "", //require("../../../public/team-david.jpg")
@@ -44,7 +44,7 @@ const TeamPage = () => {
     },
     {
       id: 5,
-      name: "Sarah Thompson",
+      name: "Akintolu O. Deborah",
       role: "Data Science Director",
       bio: "Machine learning pioneer with groundbreaking AI research background.",
       image: "", //require("../../../public/team-sarah.jpg")
@@ -53,7 +53,7 @@ const TeamPage = () => {
     },
     {
       id: 6,
-      name: "Alex Rivera",
+      name: "Balogun Daniel",
       role: "Head of Strategic Partnerships",
       bio: "Global network expert connecting innovative technologies and businesses.",
       image: "", //require("../../../public/team-alex.jpg")

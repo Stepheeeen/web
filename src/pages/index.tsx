@@ -149,7 +149,7 @@ const index = () => {
                 ),
                 title: "Bold Creativity",
                 description:
-                  "Challenging norms, breaking boundaries, and designing what&apos;s next.",
+                  "Challenging norms, breaking boundaries, and designing what's next.",
               },
               {
                 icon: (

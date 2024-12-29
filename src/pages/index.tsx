@@ -170,7 +170,7 @@ const index = () => {
                 ),
                 title: "Future-Forward Thinking",
                 description:
-                  "We embrace technology that anticipates tomorrow&apos;s needs, today.",
+                  "We embrace technology that anticipates tomorrow's needs, today.",
               },
               {
                 icon: (

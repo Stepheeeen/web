@@ -10,7 +10,7 @@ export default function Document() {
         />
         <meta
           name="keywords"
-          content="Flair Technologies, tech solutions, innovative technology, digital transformation, groundbreaking innovations, future technology"
+          content="Flair Technologies, flairtech, tech solutions, innovative technology, digital transformation, groundbreaking innovations, future technology"
         />
         <meta name="author" content="Flair Technologies LTD" />
       </Head>

@@ -13,6 +13,8 @@ export default function Document() {
           content="Flair Technologies, flairtech, tech solutions, innovative technology, digital transformation, groundbreaking innovations, future technology"
         />
         <meta name="author" content="Flair Technologies LTD" />
+        <meta name="url" content="flairtechlabs.com" />
+        <link rel="icon" href="/flair-tech.png" />
       </Head>
       <body className="antialiased">
         <Main />

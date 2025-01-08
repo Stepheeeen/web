@@ -23,7 +23,7 @@ const PortfolioPage = () => {
       title: "Ibitee Ventures",
       description:
         "Advanced analytics and recommendation engine for online retail.",
-      technologies: ["Next.js", "TypeScript", "Node js"],
+      technologies: ["Next.js", "TypeScript", "Node.js"],
       image: "", // Placeholder for image
       category: "Web",
       link: "#",

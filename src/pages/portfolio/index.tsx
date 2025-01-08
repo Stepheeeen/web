@@ -25,7 +25,7 @@ const PortfolioPage = () => {
         "Advanced analytics and recommendation engine for online retail.",
       technologies: ["Next.js", "TypeScript", "Node js"],
       image: "", // Placeholder for image
-      category: "Mobile",
+      category: "Web",
       link: "#",
     },
     {

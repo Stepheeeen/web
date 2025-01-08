@@ -20,10 +20,10 @@ const PortfolioPage = () => {
     },
     {
       id: 2,
-      title: "E-Commerce Optimization System",
+      title: "Ibitee Ventures",
       description:
         "Advanced analytics and recommendation engine for online retail.",
-      technologies: ["Next.js", "TypeScript", "Machine Learning", "GraphQL"],
+      technologies: ["Next.js", "TypeScript", "Node js"],
       image: "", // Placeholder for image
       category: "Mobile",
       link: "#",

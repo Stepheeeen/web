@@ -40,7 +40,7 @@ const PortfolioPage = () => {
     },
     {
       id: 4,
-      title: "Financial Analytics Dashboard",
+      title: "Parcel",
       description:
         "Real-time financial tracking and predictive analytics platform.",
       technologies: ["React", "Python", "Data Science", "Blockchain"],

@@ -1,8 +1,8 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { Html, Head, Main, NextScript } from "next/document"; 
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html className="geist" lang="en">
       <Head>
         <meta
           name="description"
@@ -14,9 +14,9 @@ export default function Document() {
         />
         <meta name="author" content="Flair Technologies LTD" />
         <meta name="url" content="flairtechlabs.com" />
-        <link rel="icon" href="/flair-tech.png" />
+        <link rel="icon" href="/ICON W TRANSPARENT BG.png" />
       </Head>
-      <body className="antialiased">
+      <body className="geist antialiased">
         <Main />
         <NextScript />
       </body>

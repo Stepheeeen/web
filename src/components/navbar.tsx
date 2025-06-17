@@ -1,7 +1,9 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import Logo from "../../public/flair-tech.png";
-import LogoLight from "../../public/flair-tech-light.png";
+import Logo from "../../public/FLAIR_TECH_DARK-removebg-preview.png";
+import Menu from "../../public/menu-svg.svg";
+import Close from "../../public/close-icon.svg";
+import CloseBlck from "../../public/close-x-svg.svg";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -20,67 +22,68 @@ const Navbar = ({ styling, theme }: { styling: string; theme: string }) => {
     { name: "About Us", path: "/about", active: "" },
     { name: "Portfolio", path: "/portfolio", active: "" },
     { name: "Our Team", path: "/team", active: "" },
+    { name: "Contact Us", path: "/contact", active: "" },
   ];
-
-  const social = [
-    { name: "Facebook", path: "", active: "" },
-    { name: "Twitter", path: "", active: "" },
-    { name: "Github", path: "", active: "" },
-  ];
-
+  
   return (
     <>
-      <nav
-        className={`w-full flex py-7 px-5 items-center justify-between bg-transparent text-black text-[18px] font-medium ${styling}`}
-      >
-        {LogoTheme === "dark" ? (
-          <Image alt="Logo" src={Logo} className="w-[70px]" />
-        ) : (
-          <Image alt="Logo" src={LogoLight} className="w-[70px]" />
-        )}
+    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+      <div className="max-w-7xl mx-0 px-[6px] py-[3px] flex justify-between items-center">
+        <a href="/" className="flex justify-center items-center space-x-3 cursor-pointer">
+          <Image alt="Logo" src={Logo} className="w-[14rem] md:w-[14.5rem] lg:w-[15.5rem]" />
+        </a>
 
-        <button onClick={toggleSidebar}>
-          <svg
-            width="100"
-            height="50"
-            viewBox="0 0 100 50"
-            xmlns="http://www.w3.org/2000/svg"
-            className="group cursor-pointer"
-          >
-            <line
-              x1="10"
-              y1="10"
-              x2="80"
-              y2="10"
-              stroke={`${LogoTheme === "dark" ? "black" : "white"}`}
-              strokeWidth="2"
-            />
-            <line
-              x1="40"
-              y1="20"
-              x2="80"
-              y2="20"
-              stroke={`${LogoTheme === "dark" ? "black" : "white"}`}
-              strokeWidth="2"
-              className="bottom-line transition-transform origin-left duration-300 ease-in-out"
-            />
-          </svg>
+        <button
+          className="md:hidden"
+          onClick={toggleSidebar}
+          aria-label="Toggle menu" 
+        >
+          <Image alt="menu-icon" src={Menu} className="w-[35px]" />
         </button>
-      </nav>
 
+        <ul className="hidden md:flex space-x-6 lg:space-x-8 text-gray-500 text-lg font-medium">
+          {nav.map((links, i) => (
+            <li key={i}>
+              <Link
+                href={links.path}
+                className={`transition-colors duration-400 ${
+                  pathname === links.path
+                    ? "text-[#efa853]"
+                    : "hover:text-black "
+                }`}
+              >
+                {links.name}
+              </Link>
+            </li>
+          ))}
+        </ul> 
+        <button className="hidden lg:flex px-[21px] py-[3px] bg-[#437fbf] border-[4px] border-[#437fbf] text-white rounded-[7px] text-lg font-medium transition-colors duration-400 hover:border-[#396eA7] hover:bg-[#396eA7] ">
+          <a href={nav[4].path} >
+            Get Started
+          </a>
+        </button>
+      </div>
+
+      {/* Menu for smaller devices */}
       <div
-        className={`fixed inset-0 flex items-center justify-center w-full h-full text-white syne bg-[#1b1b1b] md:p-32 z-50
-    ${isOpen ? "sidebar-enter-active" : "sidebar-exit-active"}`}
+        className={`fixed top-0 right-0 h-full w-[300px] bg-[#f6f6f6] shadow-lg transform transition-transform duration-500 ease-in-out z-40 ${
+        isOpen ? 'translate-x-0' : 'translate-x-full'
+        } md:hidden`}
       >
-        <ul className="text-[19px] md:w-[70%]">
+        <div className="flex justify-end py-[15px] px-[10px]">
+          <button onClick={toggleSidebar} aria-label="Close menu">
+            <Image alt="close-icon" src={CloseBlck} className="w-[35px]" />
+          </button>
+        </div>
+        <ul className="px-8 space-y-4">
           {nav.map((links, i) => (
             <li key={i} className="mb-3">
               <Link
                 href={links.path}
-                className={`hover:underline text-[49px] font-medium ${
+                className={`hover:underline text-[25px] font-medium ${
                   pathname === links.path
-                    ? "text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-violet-500 text-4xl font-bold"
-                    : ""
+                    ? "text-transparent bg-clip-text bg-[#efa853] font-bold"
+                    : "text-black"
                 }`}
               >
                 {links.name}
@@ -88,45 +91,17 @@ const Navbar = ({ styling, theme }: { styling: string; theme: string }) => {
             </li>
           ))}
         </ul>
-
-        <div className="hidden text-[19px] md:w-[30%] md:flex flex-col items-start justify-center border-l border-l-white pl-20 h-full gap-3">
-          <h1 className="text-[40px] syne">Contact Us</h1>
-          <p className="text-[20px] leading-relaxed">
-            Hungray +(36) 30-369-0608, <br /> Nigeria +(234) 805-258-9663.
-            flairtechhq@gmail.com
-          </p>
-
-          <ul className="text-[21px] mt-4 syne">
-            {social.map((socials, i) => (
-              <li key={i} className="mb-2">
-                <Link href={socials.path} className={`font-medium`}>
-                  {socials.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* <Image alt="Logo" src={LogoLight} className="w-[60px] absolute top-[6%] left-[4%]"/> */}
-
-        <button onClick={toggleSidebar}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="58"
-            height="58"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-x absolute top-[10%] right-[10%]"
-          >
-            <path d="M18 6 6 18" />
-            <path d="m6 6 12 12" />
-          </svg>
-        </button>
+        
       </div>
+      
+      {/* Backdrop */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-40 z-30 md:hidden"
+          onClick={toggleSidebar}
+        ></div>
+      )}
+    </nav> 
     </>
   );
 };

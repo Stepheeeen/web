@@ -1,7 +1,10 @@
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
-import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import Hero from "../../../public/hamidu-samuel-mansaray-ynBZCC173iU-unsplash.jpg";
+import FutureIllustration from "../../../public/software-devlopment--1024x1024-removebg-preview.png";
+import FutureTech from "../../../public/section-lock-tech.jpg";
 
 const About = () => {
   const [isAnimating, setIsAnimating] = useState(false);
@@ -42,6 +45,8 @@ const About = () => {
   ];
 
   return (
+    <>
+
     <div className="bg-gradient-to-br from-[#f0f4f8] to-[#e6eaf0] text-gray-800 min-h-screen">
       <Navbar styling={"z-10"} theme={"dark"} />
 
@@ -56,8 +61,8 @@ const About = () => {
         }
       `}
       >
-        <h1 className="text-3xl md:text-6xl font-bold mb-2 text-center text-indigo-600 syne">
-          About Us
+        <h1 className="text-3xl md:text-6xl font-bold mt-[90px] mb-2 text-center text-indigo-600 font-sans">
+          About Uss
         </h1>
       </div>
 
@@ -77,7 +82,7 @@ const About = () => {
         <div className="w-full md:w-1/2 overflow-hidden rounded-2xl shadow-2xl transform transition-transform hover:scale-105 mb-6 md:mb-0">
           <Image
             alt="Company"
-            src={require("../../../public/Company.jpg")}
+            src={require("../../../public/BUILDING SIGN.png")}
             className="w-full h-auto object-cover"
             priority
           />
@@ -228,7 +233,7 @@ const About = () => {
                   absolute 
                   top-[-30%] md:top-[-40%] 
                   left-[-15px] md:left-[-25px] 
-                  text-indigo-600/20
+                  text-red-800/20
                 "
                 >
                   {value.id}
@@ -241,6 +246,115 @@ const About = () => {
 
       <Footer />
     </div>
+
+
+
+
+
+    
+    <Navbar styling={"z-10"} theme={"dark"} />
+
+       <div className="bg-white text-gray-900 font-sans">
+        {/* Hero Section */}
+        <section className="relative w-full h-72 md:h-[420px] flex items-center justify-center text-white">
+          <div className="absolute inset-0 bg-url('../../../public/hamidu-samuel-mansaray-ynBZCC173iU-unsplash.jpg')"><Image className="absolute inset-0  w-[100%] h-[100%] bg-cover bg-center" src={Hero} alt="ddddddd" /></div>
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div className="relative z-10 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold">About <span className="text-blue-600">Us</span></h1>
+            <p className="text-sm md:text-base mt-2">Home / About Us</p>
+          </div>
+        </section>
+
+        {/* Intro Section */}
+        <section className="py-12 px-4 md:px-16 text-center">
+          <div className="text-blue-600 text-sm font-medium">About Us</div>
+          <h2 className="text-2xl md:text-4xl font-bold mt-2 leading-tight">
+            Innovative Software Solutions<br className="hidden md:block" /> for the Future
+          </h2>
+        </section>
+
+        {/* Impact Section */}
+        <section className="bg-gray-100 py-10 px-4 md:px-16">
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8">
+            <div className="lg:w-1/2 space-y-4">
+              <h3 className="text-xl md:text-2xl font-semibold">The Impact of Technology on Modern Society</h3>
+              <p className="text-sm md:text-base leading-relaxed">Technology has revolutionized the way humans live, work, and interact. From communication to healthcare, transportation, and entertainment, technological advancements have significantly improved efficiency and convenience in the healthcare sector. Technology has played a crucial role in diagnosis, treatment, and patient care.</p>
+              <p className="text-sm md:text-base leading-relaxed">Advanced imaging techniques, robotic surgeries, and telemedicine have improved medical outcomes accessibility.</p>
+              <button className="bg-blue-600 text-white px-6 py-2 rounded-md text-sm font-medium">Read More</button>
+            </div>
+            <div className="lg:w-1/2">
+              <Image src={FutureIllustration} alt="Impact Illustration" className="hidden xs:flex w-full max-w-md mx-auto" />
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="py-12 px-4 md:px-16 text-center">
+          <div className="text-blue-600 text-sm font-medium">Our Services</div>
+          <h2 className="text-2xl md:text-4xl font-bold mt-2">Your Satisfaction, Our Service</h2>
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              { title: 'Web Design', desc: 'Web design is all about creating visually appealing and user-friendly websites. Web design' },
+              { title: 'Web Development', desc: 'Web development is the process of building and maintaining websites or web applications.' },
+              { title: 'SEO Services', desc: 'SEO is the process of optimizing a website to improve its ranking on search engines like Google.' },
+            ].map((service, idx) => (
+              <div key={idx} className="bg-gray-50 p-6 rounded-xl shadow text-left">
+                <div className="text-blue-600 mb-4">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3v1.5M14.25 3v1.5m-8.5 4h13.5m-15 2.25h16.5M3 18.75h18M5.25 21h13.5M6 6.75h12" />
+                  </svg>
+                </div>
+                <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
+                <p className="text-sm text-gray-600">{service.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Human Ingenuity Section */}
+        <section className="bg-gray-100 py-12 px-4 md:px-16">
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8">
+            <div className="lg:w-1/2 ">
+              <Image src={FutureTech} alt="Human Ingenuity" className="w-[27rem] h-[27rem] rounded-lg" />
+            </div>
+            <div className="lg:w-1/2">
+              <h3 className="text-xl md:text-2xl font-semibold">Exploring the Boundaries of Human Ingenuity</h3>
+              <p className="text-sm md:text-base mt-4 leading-relaxed">Technology has revolutionized every aspect of modern life, shaping how we communicate, work and interact with the world. From the invention of the wheel to the rise of artificial intelligence, technological advancements have continuously pushed the boundaries of human capability.</p>
+              <p className="text-sm md:text-base mt-4 leading-relaxed">In the digital age, the Internet, smartphones, and cloud computing have made information more accessible than ever.</p>
+              <button className="bg-blue-600 text-white px-6 py-2 rounded-md text-sm font-medium mt-4">Learn More</button>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us */}
+        <section className="py-12 px-4 md:px-16 text-center">
+          <div className="text-blue-600 text-sm font-medium">Why Choose Us</div>
+          <h2 className="text-2xl md:text-4xl font-bold mt-2">Where Experience Meets Compassion</h2>
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {coreValues.map((value, i) => (
+              <div key={i} className="bg-white shadow-lg p-6 rounded-lg text-left
+                  relative w-full md:p-5 pt-6 
+                  transform 
+                  transition-all 
+                  duration-300 
+                  hover:scale-105
+              ">
+                <div className="w-14 h-14 text-4xl rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mb-3 syne">
+                  {/* <svg className="w-8 h-8 hover:text-amber-400 transform transition-all duration-200 hover:scale-105" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6l4 2" />
+                  </svg> */}
+                  {value.id}
+                </div>
+                <h4 className="font-semibold text-4xl mb-2">{value.title}</h4>
+                <p className="text-lg pt-3 text-gray-600">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+      
+      <Footer />
+    </>
   );
 };
 

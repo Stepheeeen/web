@@ -11,7 +11,7 @@ const TeamPage = () => {
       name: "Isaac Bright",
       role: "CEO",
       bio: "Experienced leader in technology strategy and business development.",
-      image: require("../../../public/CEO.jpg"),
+      image: require("../../../public/team/CEO.jpg"),
       linkedin: "https://www.linkedin.com/in/isaac-adedoyin-72aaab254/",
       twitter: "https://x.com/Ibright053Isaac",
       social: (
@@ -23,7 +23,7 @@ const TeamPage = () => {
       name: "Stephen Onucheyo",
       role: "CTO",
       bio: "Skilled in a variety of technologies with a focus on innovation and system architecture.",
-      image: require("../../../public/CTO.jpg"),
+      image: require("../../../public/team/CTO.jpg"),
       linkedin: "https://github.com/Stepheeeen",
       twitter: "https://x.com/@step_h4n",
       social: (
@@ -35,7 +35,7 @@ const TeamPage = () => {
       name: "Favour Aroniyo",
       role: "Data Science Director",
       bio: "Data-driven strategist with a focus on scalable solutions and actionable business insights.",
-      image: require("../../../public/Golden.jpg"),
+      image: require("../../../public/team/Golden.jpg"),
       linkedin:
         "https://www.instagram.com/favouraroniyo?igsh=MTNyYjViOGd0dzlndw%3D%3D&utm_source=qr",
       social2: (
@@ -51,7 +51,7 @@ const TeamPage = () => {
       name: "Utee Akaninyene",
       role: "Lead Software Architect",
       bio: "Expert in designing scalable, high-performance software solutions with a focus on user experience.",
-      image: require("../../../public/utee.jpg"),
+      image: require("../../../public/team/utee.jpg"),
       linkedin: "https://github.com/xlaez",
       twitter: "https://x.com/xla_ez",
       social: (
@@ -63,7 +63,7 @@ const TeamPage = () => {
       name: "Balogun Daniel",
       role: "Head of Product Design",
       bio: "Passionate about creating user-centered designs that bridge technology and business needs.",
-      image: require("../../../public/Odun.jpg"), 
+      image: require("../../../public/team/Odun.jpg"), 
       linkedin: "https://www.linkedin.com/in/odunayo-bukola-balogun-784400342",
       twitter:
         "https://www.instagram.com/6kaytheprinceof9/profilecard/?igsh=MWwzaWFjZWllendhdw==",
@@ -79,7 +79,7 @@ const TeamPage = () => {
       name: "Akintolu O. Deborah",
       role: "Creator and Video Editor",
       bio: "Experienced in building impactful partnerships and driving growth through collaborative innovation.",
-      image: require("../../../public/debbie.jpg"), 
+      image: require("../../../public/team/debbie.jpg"), 
       linkedin: "https://www.instagram.com/debbie_tam1/",
       twitter: "https://x.com/Deb_tam1",
       social: (

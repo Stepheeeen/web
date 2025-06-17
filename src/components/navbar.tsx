@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import Logo from "../../public/flair-tech.png";
-import LogoLight from "../../public/flair-tech-light.png";
+import LogoLight from "../../public/FLAIR_TECH_DARK-removebg-preview.png";
+import LogoDark from "../../public/FLAIR_TECH_LIGHT-removebg-preview.png";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -20,6 +20,7 @@ const Navbar = ({ styling, theme }: { styling: string; theme: string }) => {
     { name: "About Us", path: "/about", active: "" },
     { name: "Portfolio", path: "/portfolio", active: "" },
     { name: "Our Team", path: "/team", active: "" },
+    { name: "Contact Us", path: "/contact", active: "" },
   ];
 
   const social = [
@@ -33,11 +34,16 @@ const Navbar = ({ styling, theme }: { styling: string; theme: string }) => {
       <nav
         className={`w-full flex py-7 px-5 items-center justify-between bg-transparent text-black text-[18px] font-medium ${styling}`}
       >
-        {LogoTheme === "dark" ? (
-          <Image alt="Logo" src={Logo} className="w-[70px]" />
-        ) : (
-          <Image alt="Logo" src={LogoLight} className="w-[70px]" />
-        )}
+        {LogoTheme === "dark" ? (<Image
+          src={LogoLight}
+          alt="Flair Technology Logo"
+          className="w-44 md:w-64 mb-4"
+        />) : (<Image
+          src={LogoDark}
+          alt="Flair Technology Logo"
+          className="w-44 md:w-64 mb-4"
+        />)}
+
 
         <button onClick={toggleSidebar}>
           <svg
@@ -77,11 +83,10 @@ const Navbar = ({ styling, theme }: { styling: string; theme: string }) => {
             <li key={i} className="mb-3">
               <Link
                 href={links.path}
-                className={`hover:underline text-[49px] font-medium ${
-                  pathname === links.path
-                    ? "text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-violet-500 text-4xl font-bold"
-                    : ""
-                }`}
+                className={`hover:underline text-[49px] font-medium ${pathname === links.path
+                  ? "text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-violet-500 text-4xl font-bold"
+                  : ""
+                  }`}
               >
                 {links.name}
               </Link>
@@ -90,7 +95,7 @@ const Navbar = ({ styling, theme }: { styling: string; theme: string }) => {
         </ul>
 
         <div className="hidden text-[19px] md:w-[30%] md:flex flex-col items-start justify-center border-l border-l-white pl-20 h-full gap-3">
-          <h1 className="text-[40px] syne">Contact Us</h1>
+          <h1 className="text-[40px] syne">Get In Touch</h1>
           <p className="text-[20px] leading-relaxed">
             Hungray +(36) 30-369-0608, <br /> Nigeria +(234) 805-258-9663.
             flairtechhq@gmail.com

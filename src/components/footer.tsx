@@ -36,19 +36,10 @@ const Footer = () => {
           className="flex flex-col md:flex-row bg-gradient-to-br from-white to-violet-200 text-black/80 p-6 md:p-16 items-center"
         >
           <div className="w-full md:w-[70%] text-center md:text-left mb-6 md:mb-0">
-            <h2 className="text-2xl md:text-6xl font-extrabold mb-4 text-[#051826]">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-[#051826] fira">
               Partner with Us
             </h2>
-            <h2 className="text-2xl md:text-6xl font-extrabold mb-4 text-[#000103]">
-              Partner with Us
-            </h2>
-            <h2 className="text-2xl md:text-6xl font-extrabold mb-4 text-[#061b2c]">
-              Partner with Us
-            </h2>
-            <h2 className="text-2xl md:text-6xl font-extrabold mb-4 text-[#020f18]">
-              Partner with Us
-            </h2>
-            <p className="text-base md:text-xl mb-6 max-w-2xl text-black/70 fira">
+            <p className="text-base md:text-xl mb-6 max-w-2xl text-black/70 poppins">
               Ready to make an impact? Whether you&apos;re looking to grow your
               business or join an innovative team, we&apos;re here to help.
             </p>
@@ -82,10 +73,10 @@ const Footer = () => {
           className="flex flex-col md:flex-row bg-[#F3F3F3] text-black/80 p-6 md:p-16 items-center"
         >
           <div className="w-full md:w-[70%] text-center md:text-left mb-6 md:mb-0">
-            <h2 className="text-2xl md:text-4xl font-bold mb-4 syne">
+            <h2 className="text-2xl md:text-4xl font-bold text-[#051826] mb-4 fira">
               Join Our Team
             </h2>
-            <p className="text-base md:text-xl mb-6 max-w-2xl text-black/70 fira">
+            <p className="text-base md:text-xl mb-6 max-w-2xl text-black/70 poppins">
               We&apos;re always on the lookout for talented, creative individuals to
               help shape the future with us. Join the team and let&apos;s build
               something amazing together!

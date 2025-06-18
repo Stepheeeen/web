@@ -131,7 +131,7 @@ const TeamPage = () => {
       <div className="container mx-auto px-6 py-12">
         <motion.h1
           variants={pageVariants}
-          className="text-6xl font-bold text-center text-gray-900 syne mb-14"
+          className="text-6xl font-bold text-center text-gray-900 syne my-14"
         >
           Our Team
         </motion.h1>

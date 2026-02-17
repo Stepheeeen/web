@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+    --primary: 39 89% 49%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 92%;
+    --secondary-foreground: 0 0% 15%;
+    --muted: 0 0% 85%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 220 90% 56%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 39 89% 49%;
+    --chart-1: 39 89% 49%;
+    --chart-2: 220 90% 56%;
+    --chart-3: 0 0% 75%;
+    --chart-4: 0 0% 65%;
+    --chart-5: 0 0% 55%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 15%;
+    --sidebar-primary: 39 89% 49%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 92%;
+    --sidebar-accent-foreground: 0 0% 15%;
+    --sidebar-border: 0 0% 88%;
+    --sidebar-ring: 39 89% 49%;
+  }
+  .dark {
+    --background: 220 35% 12%;
+    --foreground: 0 0% 95%;
+    --card: 220 35% 16%;
+    --card-foreground: 0 0% 95%;
+    --popover: 220 35% 16%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 39 89% 49%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 35% 22%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 220 35% 25%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 39 89% 49%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 35% 22%;
+    --input: 220 35% 22%;
+    --ring: 39 89% 49%;
+    --chart-1: 39 89% 49%;
+    --chart-2: 220 90% 56%;
+    --chart-3: 220 35% 35%;
+    --chart-4: 220 35% 28%;
+    --chart-5: 220 35% 20%;
+    --sidebar-background: 220 35% 12%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 39 89% 49%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 35% 22%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 220 35% 22%;
+    --sidebar-ring: 39 89% 49%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Ensure slides align and card heights match */
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 20px 0;
+}
+
+/* Default card */
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 280ms cubic-bezier(.2,.8,.2,1), box-shadow 280ms;
+  will-change: transform;
+}
+
+/* Desktop center scaling only */
+@media (min-width: 1024px) {
+  .slick-center .testimonial-card {
+    transform: scale(1.05);
+    height: 320px;
+    z-index: 2;
+  }
+
+  .slick-list {
+    overflow: visible;
+  }
+}
+
+@media (max-width: 1024px) {
+  .slick-slide {
+    padding: 0 !important;
+  }
+
+  .slick-track {
+    display: flex !important;
+  }
+
+  .slick-slide > div {
+    width: 100%;
+  }
+}
+
+/* Slightly lift and enlarge centered card */
+.slick-center .testimonial-card {
+  transform: scale(1.05);
+  height: 360px; /* taller for centered card */
+  z-index: 2;
+}
+
+/* Keep slides overflow visible so scaled center card doesn't get clipped */
+.slick-list {
+  overflow: visible;
+}

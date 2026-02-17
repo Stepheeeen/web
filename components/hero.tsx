@@ -1,33 +1,34 @@
+import { GradientButton } from '@/components/gradient-button'
 import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section className="relative py-20 md:py-32 bg-gradient-to-b from-secondary/30 to-background overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
-      </div>
+    <section className="h-[100%] py-28 md:py-0 md:h-screen grid place-items-center relative overflow-hidden">
+      {/* Background image (light/dark) */}
+      <div className="absolute inset-0 bg-[url('/assets/hero-light.png')] dark:bg-[url('/assets/hero-dark.png')] bg-cover bg-center" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 text-balance leading-tight">
-            Build With <span className="text-primary">Flair.</span>
+          <h1 className="text-[36px] md:text-6xl font-normal mb-6 text-balance leading-tight text-transparent bg-clip-text bg-[linear-gradient(90deg,#DA9646_0%,#FFB96B_51%,#B07430_100%)]">
+            Build With <span>Flair.</span>
             <br />
-            Scale With <span className="text-primary">Confidence.</span>
+            Scale With <span>Confidence.</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 text-balance">
-            We Design and Engineer Production-Ready Digital Products and Scalable Systems for Enterprise-Class Operations.
+          <p className="text-md md:text-lg text-black dark:text-white mb-8 text-balance">
+            We design and engineer production-ready digital products and systems for founders and growing teams.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg">
+            <GradientButton className="px-8 py-6 text-lg dark:text-black rounded-full md:rounded">
               Get Started
-            </Button>
-            <Button variant="outline" className="px-8 py-6 text-lg border-border text-foreground hover:bg-secondary bg-transparent">
-              Learn More
+            </GradientButton>
+            <Button
+              variant="outline"
+              className="px-8 py-6 text-lg border-border text-foreground hover:bg-black/90 bg-transparent dark:border-transparent dark:bg-white dark:text-black dark:hover:bg-white/90 rounded-full md:rounded"
+            >
+              See how we work
             </Button>
           </div>
         </div>

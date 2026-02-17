@@ -12,6 +12,7 @@ import Timeline from '@/components/timeline'
 import Testimonials from '@/components/testimonials'
 import CTA from '@/components/cta'
 import Footer from '@/components/footer'
+import Marquee from '@/components/marquee'
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -24,6 +25,7 @@ export default function Home() {
       <Products />
       <Team />
       <WhyDifferent />
+      <Marquee />
       <Timeline />
       <Testimonials />
       <CTA />

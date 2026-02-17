@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -91,4 +87,60 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Ensure slides align and card heights match */
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 20px 0;
+}
+
+/* Default card */
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 280ms cubic-bezier(.2,.8,.2,1), box-shadow 280ms;
+  will-change: transform;
+}
+
+/* Desktop center scaling only */
+@media (min-width: 1024px) {
+  .slick-center .testimonial-card {
+    transform: scale(1.05);
+    height: 320px;
+    z-index: 2;
+  }
+
+  .slick-list {
+    overflow: visible;
+  }
+}
+
+@media (max-width: 1024px) {
+  .slick-slide {
+    padding: 0 !important;
+  }
+
+  .slick-track {
+    display: flex !important;
+  }
+
+  .slick-slide > div {
+    width: 100%;
+  }
+}
+
+/* Slightly lift and enlarge centered card */
+.slick-center .testimonial-card {
+  transform: scale(1.05);
+  height: 360px; /* taller for centered card */
+  z-index: 2;
+}
+
+/* Keep slides overflow visible so scaled center card doesn't get clipped */
+.slick-list {
+  overflow: visible;
 }

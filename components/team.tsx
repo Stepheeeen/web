@@ -44,20 +44,22 @@ const teamMembers = [
 
 export default function Team() {
   return (
-    <section id="team" className="py-20 md:py-32 bg-secondary/50">
+    <section id="team" className="py-20 md:py-32 bg-secondary/50 dark:bg-[#080E1D]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16">Meet Our Team</h2>
+        <h2 className="text-4xl md:text-5xl font-semibold text-foreground text-center mb-4">Meet Our Team</h2>
+        <p className="text-[#777777] dark:text-[#FFDB6E] text-center mx-auto md:w-1/2 mb-16 text-balance">A diverse team of engineers, designers, and strategists committed to building exceptional digital products.</p>
 
         <div className="grid md:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
-            <Card key={index} className="overflow-hidden border-border hover:shadow-lg transition-shadow bg-card">
+            <Card key={index} className="overflow-hidden border-border hover:shadow-lg transition-shadow bg-card dark:bg-[#0D0033] dark:border-none">
               {/* Avatar placeholder */}
-              <div className={`h-48 bg-gradient-to-br ${member.bgColor}`} />
+              <div className={`h-60 bg-gradient-to-br ${member.bgColor}`}
+              />
 
               <div className="p-6">
-                <h3 className="text-xl font-bold text-foreground mb-1">{member.name}</h3>
-                <p className="text-primary font-semibold text-sm mb-3">{member.role}</p>
-                <p className="text-muted-foreground text-sm mb-4">{member.bio}</p>
+                <h3 className="text-xl font-semibold text-foreground mb-1">{member.name}</h3>
+                <p className="text-[#FFC078] font-normal text-sm my-2">{member.role}</p>
+                <p className="text-muted-foreground text-sm mb-4 w-1/2">{member.bio}</p>
 
                 <div className="flex gap-3">
                   <a href="#" className="text-muted-foreground hover:text-primary transition">

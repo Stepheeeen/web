@@ -5,28 +5,29 @@ import { ExternalLink } from 'lucide-react'
 
 const products = [
   {
+    name: 'Parcel',
+    tagline: 'Logistics Redefined',
+    description: 'A robust delivery and logistics platform for managing orders, deliveries, and real-time tracking. Built for scale with real-time updates and seamless communication.',
+    features: ['Next.js', 'TypeScript', 'Socket.io', 'Tailwind CSS'],
+    impact: 'Real-time logistics management\nSeamless order tracking',
+    image: '/assets/suite-preview.png'
+  },
+  {
     name: 'Super Awoof',
-    tagline: 'Spin. Win. Repeat.',
-    description: 'A gamified mobile-first rewards platform where users spin to win prizes and cash rewards. Built with a sleek dark UI, real-time animations, and a seamless authentication flow.',
-    features: ['Next.js', 'TypeScript', 'Node.js'],
-    impact: '100% mobile-first experience\nReal-time rewards engine',
+    tagline: 'Pet Community & Rewards',
+    description: 'A cross-platform mobile and web application for pet services and community engagement. Built with Expo and React Native for a seamless user experience.',
+    features: ['Expo', 'React Native', 'TypeScript', 'Paystack'],
+    impact: 'Cross-platform pet services\nSeamless community engagement',
     url: 'https://superawoof.ng',
     image: '/assets/super-awoof-preview.png'
   },
   {
-    name: 'Suite',
-    tagline: 'Complete Solution',
-    description: 'All-in-one platform for digital transformation. Integrate all your business processes in a single, intuitive interface.',
-    features: ['Next.js', 'GraphQL', 'MongoDB'],
-    impact: '3x faster deployment\nReduced time to market',
-    image: '/assets/suite-preview.png'
-  },
-  {
-    name: 'Nexus',
-    tagline: 'Connected Ecosystem',
-    description: 'Next-generation connectivity platform. Seamlessly connect all your systems and data sources for unified intelligence.',
-    features: ['TypeScript', 'Redis', 'AWS'],
-    impact: '99.9% uptime\nEnterprise-grade reliability',
+    name: 'iBitees Ventures',
+    tagline: 'Investment Simplified',
+    description: 'A comprehensive investment and venture platform designed for streamlined business venture management and unified investment tracking.',
+    features: ['HTML', 'CSS', 'JavaScript'],
+    impact: 'Unified investment portal\nStreamlined venture management',
+    url: 'https://ibiteesventures.com',
     image: '/assets/nexus-preview.png'
   }
 ]

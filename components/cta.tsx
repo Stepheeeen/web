@@ -2,7 +2,11 @@
 
 import React, { useRef } from "react";
 
-export default function CTA() {
+interface CTAProps {
+  onContactClick?: () => void
+}
+
+export default function CTA({ onContactClick }: CTAProps) {
   const cardRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -76,13 +80,16 @@ export default function CTA() {
             </p>
 
             <div className="mt-12 relative inline-block">
-              <button className="bg-[#e0a24e] hover:opacity-90 transition px-8 py-3 rounded-full font-medium text-black shadow-lg">
-                Get Started
+              <button 
+                onClick={onContactClick}
+                className="bg-[#e0a24e] hover:opacity-90 transition px-8 py-3 rounded-full font-medium text-black shadow-lg"
+              >
+                Contact Us
               </button>
-
+{/* 
               <span className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-xs text-gray-400 italic">
                 Let’s start your journey here!
-              </span>
+              </span> */}
             </div>
           </div>
         </div>

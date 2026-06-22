@@ -11,15 +11,24 @@ import Logo from '@/public/assets/logo/logo-short.png'
 import { useTheme } from 'next-themes'
 import { GradientButton } from './gradient-button'
 
-export default function Header() {
+interface HeaderProps {
+  onContactClick?: () => void
+}
+
+export default function Header({ onContactClick }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeLink, setActiveLink] = useState('services')
+  const [mounted, setMounted] = useState(false)
 
   const sectionIds = useMemo(
-    () => ['services', 'products', 'team', 'contact'],
+    () => ['services', 'about', 'products', 'team'],
     [],
   )
-  const { theme, setTheme } = useTheme()
+  const { theme } = useTheme()
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   useEffect(() => {
     const sections = sectionIds
@@ -57,7 +66,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <Image
-              src={theme === 'light' ? LogoFullLight : LogoFullDark}
+              src={mounted && theme === 'dark' ? LogoFullDark : LogoFullLight}
               alt="Flair Tech Logo"
               className="w-auto h-14 hidden md:block"
             />
@@ -82,6 +91,17 @@ export default function Header() {
               Services
             </a>
             <a
+              href="#about"
+              onClick={() => setActiveLink('about')}
+              aria-current={activeLink === 'about' ? 'page' : undefined}
+              className={`transition inline-flex items-center rounded-full px-3 py-1 text-sm ${activeLink === 'about'
+                ? 'bg-black text-white dark:bg-white dark:text-black'
+                : 'text-foreground hover:text-primary'
+                }`}
+            >
+              About us
+            </a>
+            <a
               href="#products"
               onClick={() => setActiveLink('products')}
               aria-current={activeLink === 'products' ? 'page' : undefined}
@@ -90,25 +110,18 @@ export default function Header() {
                 : 'text-foreground hover:text-primary'
                 }`}
             >
-              About us
+              Products
             </a>
-            <a
-              href="#contact"
-              onClick={() => setActiveLink('contact')}
-              aria-current={activeLink === 'contact' ? 'page' : undefined}
-              className={`transition inline-flex items-center rounded-full px-3 py-1 text-sm ${activeLink === 'contact'
-                ? 'bg-black text-white dark:bg-white dark:text-black'
-                : 'text-foreground hover:text-primary'
-                }`}
-            >
-              FAQs
-            </a>
+            {/* Contact link removed */}
           </nav>
 
           {/* CTA Button and Theme Toggle */}
           <div className="hidden md:flex items-center gap-3">
-            <Button className="bg-[#FFC078] hover:bg-[#FFB96B] rounded-full text-black text-sm">
-              Get Started
+            <Button
+              onClick={onContactClick}
+              className="bg-[#FFC078] hover:bg-[#FFB96B] rounded-full text-black text-sm"
+            >
+              Contact Us
             </Button>
             <ThemeToggle />
           </div>
@@ -141,6 +154,17 @@ export default function Header() {
                 Services
               </a>
               <a
+                href="#about"
+                onClick={() => setActiveLink('about')}
+                aria-current={activeLink === 'about' ? 'page' : undefined}
+                className={`transition inline-flex items-center rounded-full px-3 py-1 ${activeLink === 'about'
+                  ? 'bg-black text-white dark:bg-white dark:text-black'
+                  : 'text-foreground hover:text-primary'
+                  }`}
+              >
+                About us
+              </a>
+              <a
                 href="#products"
                 onClick={() => setActiveLink('products')}
                 aria-current={activeLink === 'products' ? 'page' : undefined}
@@ -162,19 +186,15 @@ export default function Header() {
               >
                 Team
               </a>
-              <a
-                href="#contact"
-                onClick={() => setActiveLink('contact')}
-                aria-current={activeLink === 'contact' ? 'page' : undefined}
-                className={`transition inline-flex items-center rounded-full px-3 py-1 ${activeLink === 'contact'
-                  ? 'bg-black text-white dark:bg-white dark:text-black'
-                  : 'text-foreground hover:text-primary'
-                  }`}
+              {/* Contact link removed */}
+              <GradientButton
+                onClick={() => {
+                  setMobileMenuOpen(false)
+                  onContactClick?.()
+                }}
+                className="px-8 py-6 text-lg dark:text-black"
               >
-                Contact
-              </a>
-              <GradientButton className="px-8 py-6 text-lg dark:text-black">
-                Get Started
+                Contact Us
               </GradientButton>
             </nav>
           </div>

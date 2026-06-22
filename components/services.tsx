@@ -35,24 +35,21 @@ const services = [
   }
 ]
 
-export default function Services() {
+interface ServicesProps {
+  onContactClick?: () => void
+}
+
+export default function Services({ onContactClick }: ServicesProps) {
   return (
     <section id="services" className="py-20 md:py-32 bg-[#FFF8F1] dark:bg-[#080E1D]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-center md:justify-between mb-16">
-          <div>
-            <h2 className="text-4xl md:text-5xl font-semibold text-foreground text-center md:text-left">Our Services</h2>
+        <div className="text-center md:text-left mb-16">
+          <h2 className="text-4xl md:text-5xl font-semibold text-foreground">Our Services</h2>
 
-            <p className='md:w-[70%] mt-2 text-[#86847E] text-sm text-center md:text-left'>
-              Unleashing Comprehensive Digital Marketing Services Tailored to Elevate Your
-              Online Presence and Boost Your Success.
-            </p>
-          </div>
-          <div className="hidden md:block">
-            <Button className="bg-[#FFC078] hover:bg-[#FFB96B] rounded-full text-black text-sm">
-              Get Started
-            </Button>
-          </div>
+          <p className="md:w-[70%] mt-2 text-[#86847E] text-sm mx-auto md:mx-0">
+            Unleashing Comprehensive Digital Marketing Services Tailored to Elevate Your
+            Online Presence and Boost Your Success.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -82,7 +79,7 @@ export default function Services() {
                   {service.description}
                 </p>
 
-                <a
+                {/* <a
                   href="#"
                   className="
                   font-semibold
@@ -95,7 +92,7 @@ export default function Services() {
                 "
                 >
                   Learn more <ChevronRight size={16} />
-                </a>
+                </a> */}
               </Card>
 
             )

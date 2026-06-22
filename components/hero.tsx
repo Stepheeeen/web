@@ -2,7 +2,11 @@ import { GradientButton } from '@/components/gradient-button'
 import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
 
-export default function Hero() {
+interface HeroProps {
+  onContactClick?: () => void
+}
+
+export default function Hero({ onContactClick }: HeroProps) {
   return (
     <section className="h-[100%] py-28 md:py-0 md:h-screen grid place-items-center relative overflow-hidden">
       {/* Background image (light/dark) */}
@@ -21,8 +25,11 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <GradientButton className="px-8 py-6 text-lg dark:text-black rounded-full md:rounded">
-              Get Started
+            <GradientButton 
+              onClick={onContactClick}
+              className="px-8 py-6 text-lg dark:text-black rounded-full md:rounded"
+            >
+              Contact Us
             </GradientButton>
             <Button
               variant="outline"
